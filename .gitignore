@@ -1,0 +1,6 @@
+# Full-resolution downloads stay available locally; the website uses WebP copies.
+assets/originals/
+node_modules/
+.DS_Store
+*.log
+__pycache__/
