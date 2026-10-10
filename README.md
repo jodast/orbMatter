@@ -56,3 +56,38 @@ Trophy Designs für Forum Kreislaufwirtschaft
 Offenheit für neue Kooperationen kommunizieren
 
 Kontaktmöglichkeit für Projektanfragen
+
+# Technik & Veröffentlichung
+
+Die Website besteht aus statischem HTML, CSS und JavaScript. Es ist kein Build nötig.
+GitHub Pages kann direkt aus dem Repository-Hauptverzeichnis veröffentlichen;
+`.nojekyll` ist bereits vorhanden. Lokal lässt sich `index.html` direkt öffnen
+oder mit `python3 -m http.server 4173` ansehen.
+
+## SEO & öffentliche Adresse
+
+Die öffentliche Adresse ist auf **https://www.orbmatter.ch/** vorbereitet.
+Bei einer anderen endgültigen Domain müssen die absoluten URLs in `index.html`
+(Canonical, Social-Media-Metadaten und JSON-LD), `robots.txt`, `sitemap.xml` und
+`404.html` angepasst werden. Die Domain und HTTPS werden separat in GitHub Pages
+und beim DNS-Anbieter eingerichtet.
+
+- `robots.txt` erlaubt das Crawlen und verweist auf `sitemap.xml`.
+- Die Sitemap enthält nur die Startseite: Abschnittsanker sind keine eigenen Seiten.
+- `index.html` enthält Suchmaschinen-Metadaten, Open Graph, Twitter Cards und
+  strukturierte Daten für die Designpraxis und die Website.
+- `assets/social-preview.png` ist das 1200 × 630 px grosse Vorschaubild beim Teilen.
+  Die bearbeitbare HTML-Vorlage liegt in `scripts/social-preview.html`.
+- `assets/favicon.svg`, die PNG-Icons, `favicon.ico` und `site.webmanifest`
+  stellen passende Symbole für Browser und gespeicherte Verknüpfungen bereit.
+- `404.html` bietet eine gestaltete Fehlerseite mit Rückweg zur Startseite.
+
+Nach der Veröffentlichung die Domain in Google Search Console bestätigen und
+`https://www.orbmatter.ch/sitemap.xml` einreichen. Bei Hosting unter einer
+GitHub-Projektadresse wie `username.github.io/repository/` liegt `robots.txt`
+nicht am Host-Stamm; die Sitemap lässt sich trotzdem direkt einreichen.
+
+Die Originalbilder bleiben lokal in `assets/originals/` und werden durch
+`.gitignore` ausgeschlossen. Optimierte Kopien aller Bilder liegen in
+`assets/library/`, die tatsächlich verwendeten Bildgrössen in `assets/images/`.
+`python3 scripts/prepare_images.py` erzeugt sie bei Bedarf neu (benötigt Pillow).
