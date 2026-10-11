@@ -78,7 +78,8 @@ und beim DNS-Anbieter eingerichtet.
   strukturierte Daten für die Designpraxis und die Website.
 - `assets/social-preview.png` ist das 1200 × 630 px grosse Vorschaubild beim Teilen.
   Die bearbeitbare HTML-Vorlage liegt in `scripts/social-preview.html`.
-- `assets/favicon.svg`, die PNG-Icons, `favicon.ico` und `site.webmanifest`
+- `assets/images/orbMatter_logo.png`, die daraus abgeleiteten PNG-Icons,
+  `favicon.ico` und `site.webmanifest`
   stellen passende Symbole für Browser und gespeicherte Verknüpfungen bereit.
 - `404.html` bietet eine gestaltete Fehlerseite mit Rückweg zur Startseite.
 
