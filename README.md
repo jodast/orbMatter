@@ -64,7 +64,7 @@ GitHub Pages kann direkt aus dem Repository-Hauptverzeichnis veröffentlichen;
 `.nojekyll` ist bereits vorhanden. Lokal lässt sich `index.html` direkt öffnen
 oder mit `python3 -m http.server 4173` ansehen.
 
-## SEO & öffentliche Adresse
+## SEO & öffentliche Adressen
 
 Die öffentliche Adresse ist auf **https://www.orbmatter.ch/** vorbereitet.
 Bei einer anderen endgültigen Domain müssen die absoluten URLs in `index.html`
